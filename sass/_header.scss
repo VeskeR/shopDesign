@@ -55,8 +55,12 @@
 		padding: 0 3rem;
 		background-color: $red--500;
 		color: $white;
+		transition: .4s ease;
 		& i {
 			font-size: 3rem;
+		}
+		&:hover {
+			background-color: $red--900;
 		}
 	}
 }

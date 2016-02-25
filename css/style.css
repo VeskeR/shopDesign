@@ -233,9 +233,13 @@ scrollbar {
   padding: 0 3rem;
   background-color: #F44336;
   color: #FFFFFF;
+  transition: .4s ease;
 }
 .header__shop-cart i {
   font-size: 3rem;
+}
+.header__shop-cart:hover {
+  background-color: #B71C1C;
 }
 
 .btn-search {
@@ -262,4 +266,8 @@ body {
   width: 90%;
   display: flex;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
 }
