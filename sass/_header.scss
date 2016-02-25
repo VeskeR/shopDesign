@@ -1,0 +1,66 @@
+.header {
+	display: flex;
+	background-color: $white;
+	width: 100%;
+	justify-content: space-between;
+	@include shadow2();
+	color: $grey--800;
+	&__logo {
+		display: flex;
+		align-items: center;
+		padding: 2rem 1rem;
+		font-size: 2rem;
+		color: $indigo--900;
+		& i {
+
+		}
+		& span {
+			font-family: "Roboto-Bold";
+		}
+	}
+	&__search {
+		display: flex;
+		align-items: center;
+		padding: 2rem 1rem;
+		& input {
+			height: 2.25rem;
+			font-size: 1rem;
+			border: $indigo--500 1px solid;
+			border-right: none;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	&__phone {
+		display: flex;
+		align-items: center;
+		padding: 2rem 1rem;
+		& i {
+			font-size: 2rem;
+		}
+	}
+	&__work-time {
+		display: flex;
+		align-items: center;
+		padding: 2rem 1rem;
+		& i {
+			font-size: 2rem;
+		}
+	}
+	&__shop-cart {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0 3rem;
+		background-color: $red--500;
+		color: $white;
+		& i {
+			font-size: 3rem;
+		}
+	}
+}
+.btn-search {
+	border: $indigo--500 1px solid;
+	border-left: none;
+}

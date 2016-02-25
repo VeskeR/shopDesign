@@ -1,0 +1,33 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ @import "compass/reset";
+ @import "colors";
+ @import "fonts";
+ @import "ripple";
+ @import "scrollbar";
+ @import "shadows";
+ @import "buttons";
+
+ @import "top-menu";
+ @import "header";
+
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 100%;
+}
+body {
+	background-color: $grey--50;
+	font-family: "Roboto";
+}
+.container {
+	width: 90%;
+	display: flex;
+	margin: auto;
+}

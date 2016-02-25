@@ -1,0 +1,265 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  /* Preferred icon size */
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+.ripple {
+  overflow: hidden;
+  position: relative;
+}
+.ripple--active {
+  width: .1rem;
+  height: .1rem;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 100%;
+  background-color: white;
+  opacity: 0;
+  -webkit-transform: scale(0);
+}
+.ripple--animate {
+  animation: rippling 1s ease-out;
+}
+
+@keyframes rippling {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: .8;
+  }
+  100% {
+    -webkit-transform: scale(100);
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+scrollbar {
+  display: none;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 5.5rem;
+  height: 2.25rem;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: none;
+  background-color: #2196F3;
+  font-family: 'Roboto';
+  cursor: pointer;
+}
+
+.top-menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  font-size: .8rem;
+}
+.top-menu a {
+  color: #212121;
+  text-decoration: none;
+  padding: .5rem 0;
+}
+.top-menu a:hover {
+  text-decoration: underline;
+}
+.top-menu a:not(:last-child) {
+  padding-right: 1.2rem;
+}
+.top-menu__about {
+  display: flex;
+}
+.top-menu__user {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  background-color: #FFFFFF;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #424242;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  color: #1A237E;
+}
+.header__logo span {
+  font-family: "Roboto-Bold";
+}
+.header__search {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.header__search input {
+  height: 2.25rem;
+  font-size: 1rem;
+  border: #3F51B5 1px solid;
+  border-right: none;
+}
+.header__search input:focus {
+  outline: none;
+}
+.header__phone {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.header__phone i {
+  font-size: 2rem;
+}
+.header__work-time {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+.header__work-time i {
+  font-size: 2rem;
+}
+.header__shop-cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 3rem;
+  background-color: #F44336;
+  color: #FFFFFF;
+}
+.header__shop-cart i {
+  font-size: 3rem;
+}
+
+.btn-search {
+  border: #3F51B5 1px solid;
+  border-left: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #FAFAFA;
+  font-family: "Roboto";
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
