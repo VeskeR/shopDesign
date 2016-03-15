@@ -111,22 +111,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: absolute;
   border-radius: 100%;
   background-color: white;
-  opacity: 0;
+  opacity: .7;
   -webkit-transform: scale(0);
 }
 .ripple--animate {
-  animation: rippling 1s ease-out;
+  animation-name: rippling;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.ripple--fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 @keyframes rippling {
   0% {
     -webkit-transform: scale(1);
-    opacity: .8;
   }
   100% {
     -webkit-transform: scale(100);
   }
 }
+
 ::-webkit-scrollbar {
   display: none;
 }

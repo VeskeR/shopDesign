@@ -1,13 +1,16 @@
 $(document).ready(function () {
-	$('.ripple').on('click', function (e) {
+	$('.ripple').on('mousedown', function (e) {
 		var ripple = $('<div class="ripple--active ripple--animate"></div>');
 		$(this).append(ripple);
 		var x = (e.pageX - $(this).offset().left);
 		var y = (e.pageY - $(this).offset().top);
 		ripple.css('top', y).css('left', x);
-		setTimeout(function() {
-			ripple.remove();
-		}, 5000);
+		$(ripple).on('mouseout mouseup', function (e) {
+			ripple.addClass('ripple--fade-out');
+			setTimeout(function() {
+				ripple.remove();
+			}, 5000);
+		});
 	});
 
 	$('.registration__button-reg').on('click', function(){
