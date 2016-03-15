@@ -1,5 +1,7 @@
 $(document).ready(function () {
 	$('.ripple').on('mousedown', function (e) {
+		var rippleScaleDuration = 500;
+		var rippleFadeOutDuration = 500;
 		var ripple = $('<div class="ripple--active"></div>');
 		$(this).append(ripple);
 		var x = (e.pageX - $(this).offset().left);
@@ -20,10 +22,15 @@ $(document).ready(function () {
 				step: function (now) {
 					$(this).css('-webkit-transform','scale(' + now + ')');
 				},
-				duration: 1000
+				duration: rippleScaleDuration
 		});
 		$(ripple).add(window).on('mouseout mouseup', function (e) {
-			ripple.addClass('ripple--fade-out');
+			// ripple.addClass('ripple--fade-out');
+			$(ripple).animate({ opacity: 0 }, {
+					queue: false,
+					duration: rippleFadeOutDuration / 2,
+					easing: 'linear'
+			});
 			setTimeout(function() {
 				ripple.remove();
 			}, 5000);
