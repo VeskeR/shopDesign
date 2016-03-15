@@ -104,8 +104,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
 }
 .ripple--active {
-  width: .1rem;
-  height: .1rem;
+  width: 2px;
+  height: 2px;
   top: 50%;
   left: 50%;
   position: absolute;
